@@ -26,7 +26,7 @@ useEffect(() => {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a
+            <a data-testid="about"
               href="#about"
             >
               About me
@@ -37,7 +37,7 @@ useEffect(() => {
           </li>
           {categories.map((category) => (
             <li className={`mx-1 ${
-                currentCategory.name === category.name && 'navActive'
+                currentCategory.name === category.name
                 }`} key={category.name}>
               <span
                 onClick={() => {
